@@ -92,3 +92,8 @@ margin: -7px; background-color: #c00; color: #fff;
 }
 #errorExplanation ul li { font-size: 12px; list-style: square;
 }
+.time_date
+{
+	color: #ff0000;
+	
+}

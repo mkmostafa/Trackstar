@@ -8,7 +8,14 @@
 <h3> <%= product.title %> </h3>
 <% sanitize product.description %>
 <div class = "price_line">
-<span class = "price"> <%= number_to_currency(product.price) %> </span>
+<span class = "price"> <%= number_to_currency(product.price,
+                                           :precision => 2, 
+                                           :raise => true,
+                                           :locale => :eg,
+                                           :delimiter => ",",
+                                           :separator => ".",
+                                           :format => '%n %u',
+                                           :unit => "$") %> </span>
 </div>
 </div>
 <% end %>
