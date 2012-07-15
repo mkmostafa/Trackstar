@@ -19,7 +19,7 @@
     <%= link_to 'Show', product %><br/>
     <%= link_to 'Edit', edit_product_path(product) %><br/>
     <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %><br/>
-    <span class = "list-price"> <%= "Price: " %> <%= product.price %> </span>
+    <span class = "list-price"> <%= "Price: " %> <%= number_to_currency(product.price) %> </span>
     </td>
     
   </tr>
