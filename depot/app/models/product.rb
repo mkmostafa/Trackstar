@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   default_scope :order => 'title'
+  has_many :line_items
   attr_accessible :description, :image_url, :title, :price
   validates_presence_of :description, :image_url, :title, :price
   validates_numericality_of :price,
@@ -12,6 +13,19 @@ class Product < ActiveRecord::Base
                       :message => 'must be for a ' +
                                    'PNG, jpg or Gif'
   validate :length_of_title_must_be_at_least_10
+  before_destroy :ensure_not_referenced_by_a_line_item
+
+
+
+  def ensure_not_referenced_by_a_line_item
+    if(line_items.count.zero?)
+      return true
+    else
+      errors[:base] << "referenced by a line item"
+      return false
+    end
+  end
+
 
   protected 
 

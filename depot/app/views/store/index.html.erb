@@ -2,6 +2,11 @@
 <p id = "notice"> <%= notice%> </p>
 <% end %>
 <h1>Your Pragmatic Catalogue </h1>
+
+<% if !@user_store_access_count.nil? && @user_store_access_count > 5 %>
+<span class = "Number_of_visits"> <%= pluralize(@user_store_access_count,'Visit')%> </span>
+<% end %>
+
 <% @products.each do |product| %>
 <div class = "entry">
 <% image_tag(product.image_url) %>
@@ -16,6 +21,15 @@
                                            :separator => ".",
                                            :format => '%n %u',
                                            :unit => "$") %> </span>
+<span class = "add_to_cart">
+ 
+<%= button_to 'Add To Cart', 
+line_items_path(:product_id => product),
+:method => :create %>
+
+
+</span>                  
+                       
 </div>
 </div>
 <% end %>
