@@ -1,19 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one: 
+   id: 1
    title: MyString
    description: MyText 
    image_url: MyString 
    price: 9.99
 
 two:
+   id: 2
    title: MyString 
    description: MyText 
    image_url:  MyString 
    price:      9.99
 
 ruby:
+    id: 3
     title:       programming ruby 1.9 
     description: programming language.
-    price:       49.50 
+    price:       49.500 
     image_url:   ruby.png
+
+macbook:
+       id: 4
+       title:    macbookpro
+       description:   laptop
+       price:   1000.00
+       image_url: ruby.png

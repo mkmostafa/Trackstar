@@ -97,3 +97,18 @@ margin: -7px; background-color: #c00; color: #fff;
 	color: #ff0000;
 	
 }
+#store .cart_title
+{
+	font: 120% bold;
+}
+
+#store .item_price, #store .total_line
+{
+	text-align: right;
+}
+
+#store .total_line .total_cell
+{
+	font-weight: bold;
+	border-top: 1px solid #595;
+}
