@@ -1,3 +1,4 @@
+<%= javascript_include_tag "show" %>
 <h2 class = "cart_title">Your Pragmatic Cart</h2>
 <p id="notice"><%= notice %></p>
 
@@ -9,8 +10,7 @@
 <td> <%= item.quantity %> &times; </td>
 <td> <%= item.product.title%> </td>
 <td class = "item_price"> <%= number_to_currency(item.total_price)%> </td>
-<td> <%= link_to 'Remove Item', :action => :remove_item_from_cart,
-                                :id => item.id ,:confirm => 'Are You Sure?'%></td>
+<td> <%= link_to 'Remove Item',remove_item_from_cart_cart_path(item.id),:confirm => 'Are You Sure?'%></td>
 </tr>
 
 <%end%>
