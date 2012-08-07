@@ -7,6 +7,11 @@ Depot::Application.routes.draw do
 
   resources :products
 
+  resources :carts do
+    member do
+      get 'remove_item_from_cart'
+    end
+  end
 
 
   # The priority is based upon order of creation:
