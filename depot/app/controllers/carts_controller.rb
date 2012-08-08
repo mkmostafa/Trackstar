@@ -3,7 +3,7 @@
       # GET /carts.json
       def index
         @carts = Cart.all
-
+        @cart = current_cart
         respond_to do |format|
           format.html # index.html.erb
           format.json { render json: @carts }

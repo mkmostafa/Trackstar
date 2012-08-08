@@ -1,0 +1,18 @@
+<%= javascript_include_tag "show" %>
+<h2 class = "cart_title">Your Pragmatic Cart</h2>
+<p id="notice"><%= notice %></p>
+
+<table>
+
+<%= render(cart.line_items) %>
+
+<tr class = "total_line">
+<td colspan = "2" >Total</td>
+<td class = "total_cell"><%=number_to_currency(cart.total_price) %></td>
+</tr>
+
+
+</table>
+<%= link_to 'Edit', edit_cart_path(cart) %> |
+<%= link_to 'Back', carts_path %>
+<%= button_to 'Empty Cart',cart ,:method => :delete, :confirm => 'Are You Sure?'%>

@@ -4,16 +4,7 @@
 
 <table>
 
-<% for item in @cart.line_items%>
-
-<tr class = "cart_line_items">
-<td> <%= item.quantity %> &times; </td>
-<td> <%= item.product.title%> </td>
-<td class = "item_price"> <%= number_to_currency(item.total_price)%> </td>
-<td> <%= link_to 'Remove Item',remove_item_from_cart_cart_path(item.id),:confirm => 'Are You Sure?'%></td>
-</tr>
-
-<%end%>
+<%= render(@cart.line_items) %>
 
 <tr class = "total_line">
 <td colspan = "2" >Total</td>
