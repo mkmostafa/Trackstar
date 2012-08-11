@@ -1,20 +1,38 @@
 <!DOCTYPE html> 
 <html>
 <head>
-<title>Pragprog Books Online Store</title> 
+<title id = "title">Pragprog Books Online Store</title>
 <%= stylesheet_link_tag "scaffold" %>
 <%= stylesheet_link_tag "depot", :media => "all" %> 
 <%= javascript_include_tag "jquery.js", "rails.js", "application", :defaults %>
 <%= csrf_meta_tag %>
 </head>
-<body id="store">
+<body id="store" onload = "clock()"> 
 <div id="banner">
 <%= image_tag("logo.png") %>
 <%= @page_title || "Pragmatic Bookshelf" %>
 </div>
 <div id="columns">
 <div id="side">
-<span class = "time_date"> <%= Time.new %> </span><br />
+<div id = "time_date">
+<span > <%= Time.new %> </span><br />
+</div>
+<script type="text/javascript">
+
+function clock() 
+{
+     setInterval(function(){getTime();},1000)
+	
+}
+
+function getTime() 
+{
+	var time = new Date();
+	document.getElementById("time_date").innerHTML = time;
+}
+
+</script>
+
 <div id = "cart">
 <%= render (@cart) %>
 </div>
@@ -29,5 +47,5 @@
 <%= yield %>
 </div>
 </div>
-</body> 
+</body>
 </html>
