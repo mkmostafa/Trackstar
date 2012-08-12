@@ -15,4 +15,5 @@
 </table>
 <%= link_to 'Edit', edit_cart_path(cart) %> |
 <%= link_to 'Back', carts_path %>
-<%= button_to 'Empty Cart',cart ,:method => :delete, :confirm => 'Are You Sure?'%>
+<%= button_to 'Empty Cart',cart ,:method => :delete, 
+          :confirm => 'Are You Sure?', :remote => true%>

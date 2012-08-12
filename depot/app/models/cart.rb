@@ -25,4 +25,12 @@ class Cart < ActiveRecord::Base
     total
   end
 
+  def total_items
+    total = 0
+    for @item in line_items
+      total += @item.quantity
+    end
+      total
+  end
+
 end

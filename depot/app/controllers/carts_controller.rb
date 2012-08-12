@@ -80,9 +80,12 @@
       def destroy
         @cart = Cart.find(params[:id])
         @cart.line_items.delete_all
+        @cart.save
         respond_to do |format|
+          format.js
           format.html { redirect_to store_url, :notice => 'Your Cart is Empty' }
           format.xml {head :ok}
+
         end
       end
 
@@ -101,7 +104,10 @@
         end
           @cart.save
       end
-      redirect_to :back
+        respond_to do |format|
+          format.js
+          format.html { redirect_to :back }
+        end
       end
 
     end

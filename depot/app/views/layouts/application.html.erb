@@ -6,8 +6,9 @@
 <%= stylesheet_link_tag "depot", :media => "all" %> 
 <%= javascript_include_tag "jquery.js", "rails.js", "application", :defaults %>
 <%= csrf_meta_tag %>
+
 </head>
-<body id="store" onload = "clock()"> 
+<body id="store" onload = "clock();"> 
 <div id="banner">
 <%= image_tag("logo.png") %>
 <%= @page_title || "Pragmatic Bookshelf" %>
@@ -21,7 +22,7 @@
 
 function clock() 
 {
-     setInterval(function(){getTime();},1000)
+     setInterval(function(){getTime();},1000);
 	
 }
 
@@ -30,12 +31,12 @@ function getTime()
 	var time = new Date();
 	document.getElementById("time_date").innerHTML = time;
 }
-
 </script>
 
 <div id = "cart">
 <%= render (@cart) %>
 </div>
+
 <br />
 <br />
 <a href="http://www....">Home</a> <br /> 
