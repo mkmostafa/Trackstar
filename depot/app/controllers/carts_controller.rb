@@ -83,7 +83,7 @@
         @cart.save
         respond_to do |format|
           format.js
-          format.html { redirect_to store_url, :notice => 'Your Cart is Empty' }
+          format.html { redirect_to store_url }
           format.xml {head :ok}
 
         end
