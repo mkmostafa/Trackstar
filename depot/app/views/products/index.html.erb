@@ -12,7 +12,12 @@
     </td>
 
     <td width = "60%">
+    <%if(product.title.nil?)%>
+    <span class = "list-title"> Untitled </span><br />
+    <% else %>
     <span class = "list-title"> <%=h product.title %> </span><br />
+    <% end %>
+
     <%=h truncate(product.description.gsub(/<.*?>/,''),:length => 80) %>
     </td>
 

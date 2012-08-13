@@ -11,13 +11,7 @@
   <tr>
     <td><%= line_item.cart_id%></td>
     <td><%= line_item.quantity %> &times;</td>
-    <%begin%>
-    <%p = Product.find(line_item.product_id)%>
-    <%rescue ActiveRecord::RecordNotFound%>
-    <td>no name </td>
-    <%else%>
-    <td><%= p.title %></td>
-    <%end%>
+    <td><%= line_item.title %></td>
 
     <td><%= link_to 'Show', line_item %></td>
     <td><%= link_to 'Edit', edit_line_item_path(line_item) %></td>

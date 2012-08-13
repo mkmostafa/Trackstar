@@ -43,7 +43,7 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should destroy product" do
     assert_difference('Product.count', -1) do
-      delete :destroy, id: @product
+      delete :destroy, id: @product2
     end
 
     assert_redirected_to products_path
@@ -51,7 +51,7 @@ class ProductsControllerTest < ActionController::TestCase
   
   test "There are 2 entries" do
     get :index
-    assert_select '.list-image', 3
+    assert_select '.list-image', 4
     assert_select '.list-price', "Price: 9.99 $"
   end
   

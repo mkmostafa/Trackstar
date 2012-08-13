@@ -6,6 +6,8 @@ class LineItemsControllerTest < ActionController::TestCase
 
   setup do
     @line_item = line_items(:one)
+    @product = products(:one)
+    @cart = carts(:one)
   end
 
   test "should get index" do
@@ -20,11 +22,11 @@ class LineItemsControllerTest < ActionController::TestCase
   end
 
   test "should create line_item" do
-    assert_difference('LineItem.count') do
-      post :create, :product_id => products(:ruby).id
+    assert_difference('LineItem.count',1) do
+      post :create, :product_id => @product.id, :cart_id => @cart.id
     end
 
-    assert_redirected_to cart_path(assigns(:line_item).cart)
+    assert_redirected_to store_url
   end
 
   test "should show line_item" do

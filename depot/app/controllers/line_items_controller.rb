@@ -10,6 +10,7 @@ class LineItemsController < ApplicationController
   # GET /line_items
   # GET /line_items.json
   def index
+    @cart = current_cart
     @line_items = LineItem.all
     respond_to do |format|
       format.html # index.html.erb
@@ -21,6 +22,7 @@ class LineItemsController < ApplicationController
   # GET /line_items/1.json
   def show
   begin
+    @cart = current_cart
     @line_item = LineItem.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     logger.error "Attempt to access invalid item"
@@ -36,16 +38,17 @@ class LineItemsController < ApplicationController
   # GET /line_items/new
   # GET /line_items/new.json
   def new
+    @cart = current_cart
     @line_item = LineItem.new
-
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render action: 'new'}# new.html.erb
       format.json { render json: @line_item }
-    end
+  end
   end
 
   # GET /line_items/1/edit
   def edit
+    @cart = current_cart
     @line_item = LineItem.find(params[:id])
   end
 
@@ -53,8 +56,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     @cart = current_cart
-    @product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(@product.id)
+    @line_item = @cart.add_product(params[:product_id])
 
     reset_visit_count
 
@@ -67,7 +69,7 @@ class LineItemsController < ApplicationController
         format.html { render action: "new" }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
-    end
+  end
   end
 
   # PUT /line_items/1

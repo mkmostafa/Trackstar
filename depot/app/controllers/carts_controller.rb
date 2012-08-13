@@ -30,9 +30,9 @@
       # GET /carts/new.json
       def new
         @cart = Cart.new
-
+        @cart.save
         respond_to do |format|
-          format.html # new.html.erb
+          format.html {render action: 'new'}# new.html.erb
           format.json { render json: @cart }
         end
       end
