@@ -13,7 +13,6 @@ class Cart < ActiveRecord::Base
                                   :price => product.price,
                                   :title => product.title)
   		line_items << current_item
-      line_items.save
   	end
   	current_item
   end

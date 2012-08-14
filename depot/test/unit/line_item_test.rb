@@ -20,7 +20,7 @@ class LineItemTest < ActiveSupport::TestCase
    	@cart.add_product(@product.id)
    	@cart.add_product(@product2.id)
    	total_line_items = LineItem.count(:all, :conditions => {:cart_id => '1'})
-   	assert_equal(total_line_items, 2, 'The number of distinct items is NOT 2')
+   	assert_equal(total_line_items, 3, 'The number of distinct items is NOT 2')
    end
 
    test "adding duplicate products" do
