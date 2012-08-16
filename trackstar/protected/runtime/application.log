@@ -1,0 +1,218 @@
+2012/08/16 19:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:44:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:45:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:46:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:46:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:46:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:46:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:46:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
+2012/08/16 19:47:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(271): CController->missingAction('gii')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('gii')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=site/gii
+---
+2012/08/16 19:49:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii.".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=gii.
+---
