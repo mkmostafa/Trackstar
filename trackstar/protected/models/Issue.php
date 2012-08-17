@@ -143,12 +143,53 @@ class Issue extends CActiveRecord
 			);
 	}
 
+	public function getTypeName($typeId)
+	{
+		if($typeId==0)
+		{
+			return 'Bug';
+		}
+		if($typeId==1)
+		{
+			return 'Feature';
+		}
+		if($typeId==2)
+		{
+			return 'Task';
+		}
+		return '';
+	}
 	public function getStatusOptions()
 	{
 		return array(
-			NOT_STARTED_YET => "Not Started Yet",
-			STARTED => 'Started',
-			FINISHED => 'Finished',
+			self::STATUS_NOT_STARTED_YET => "Not Started Yet",
+			self::STATUS_STARTED => 'Started',
+			self::STATUS_FINISHED => 'Finished',
 			);
+	}
+	public function getStatusName($statusId)
+	{
+		if($statusId==0)
+		{
+			return 'Not Started Yet';
+		}
+		if($statusId==1)
+		{
+			return 'Started';
+		}
+		if($statusId==2)
+		{
+			return 'Finished';
+		}
+		return '';
+	}
+	public function getProjectName()
+	{
+		if($this->project->name === null)
+		{
+			return '';
+		}
+		
+		return $this->project->name;
 	}
 }

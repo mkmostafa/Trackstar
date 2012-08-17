@@ -7,6 +7,7 @@ class IssueController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	private $_project = null;
 
 	/**
 	 * @return array action filters
@@ -16,6 +17,7 @@ class IssueController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
+			'projectContext + create' // creating issue should be within specific project context
 		);
 	}
 
@@ -63,6 +65,7 @@ class IssueController extends Controller
 	public function actionCreate()
 	{
 		$model=new Issue;
+		$model->project_id=$this->_project->id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -167,5 +170,36 @@ class IssueController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	protected function loadProject($project_id)
+	{
+		if($this->_project === null)
+		{
+			$this->_project = Project::model()->findByPk($project_id);
+			if($this->_project === null)
+			{
+				throw new CHttpException(404,'The requested project does not exist.');
+			}
+		}
+		return $this->_project;
+	}
+
+	public function filterProjectContext($filterChain)
+	{
+		$projectId = null;
+		if(isset($_POST['pid']))
+			$projectId = $_POST['pid'];
+		else
+			if(isset($_GET['pid']))
+				$projectId = $_GET['pid'];
+
+		$this->loadProject($projectId);
+		$filterChain -> run();
+	}
+
+	public function getProject()
+	{
+		return $this->_project;
 	}
 }

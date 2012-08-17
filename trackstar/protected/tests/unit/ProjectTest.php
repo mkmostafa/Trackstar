@@ -3,6 +3,8 @@ class ProjectTest extends CDbTestCase
 {
 	public $fixtures=array(
 		'projects'=>'Project',
+		'users' => 'User',
+		'userAssignProject' => ':tbl_project_user_assignment',
 		);
 
 	public function testCrud()
@@ -74,5 +76,12 @@ class ProjectTest extends CDbTestCase
 		$this -> assertTrue($project->save(false));
 		$retrievedProject = Project::model()->findByPk($project->id);
 		$this->assertEquals($retrievedProject->name, 'created test project 1');
+	}
+	public function testGetUserOptions()
+	{
+		$project = $this->projects('project1');
+		$options = $project->userOptions;
+		$this->assertTrue(is_array($options));
+		$this->assertTrue(0 < count($options));
 	}
 }

@@ -9,6 +9,10 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
+	<div>
+	<?php echo CHtml::encode($this->getProject()->name); ?>
+	</div>
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
@@ -17,16 +21,16 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('project_id')); ?>:</b>
-	<?php echo CHtml::encode($data->project_id); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('project_name')); ?>:</b>
+	<?php echo CHtml::encode($data->project->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('type_id')); ?>:</b>
-	<?php echo CHtml::encode($data->type_id); ?>
+	<?php echo CHtml::encode($data->getTypeName($data->type_id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status_id')); ?>:</b>
-	<?php echo CHtml::encode($data->status_id); ?>
+	<?php echo CHtml::encode($data->getStatusName($data->status_id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('owner_id')); ?>:</b>
