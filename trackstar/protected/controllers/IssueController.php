@@ -17,7 +17,7 @@ class IssueController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
-			'projectContext + create' // creating issue should be within specific project context
+			'projectContext + create + index + admin' // creating, listing or managing issue should be within specific project context
 		);
 	}
 
@@ -90,6 +90,7 @@ class IssueController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$this->_project = $model->project;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -125,7 +126,18 @@ class IssueController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Issue');
+		$dataProvider=new CActiveDataProvider('Issue',
+		array(
+			'criteria' => array(
+				'condition' => 'project_id = :projectId',
+				'params' => array(':projectId' => $this->_project->id)
+				),
+
+			'pagination' => array('pageSize' => 5),
+			
+			    ));
+
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -136,10 +148,14 @@ class IssueController extends Controller
 	 */
 	public function actionAdmin()
 	{
+
+
 		$model=new Issue('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->project_id = $this->_project->id;
 		if(isset($_GET['Issue']))
 			$model->attributes=$_GET['Issue'];
+
 
 		$this->render('admin',array(
 			'model'=>$model,

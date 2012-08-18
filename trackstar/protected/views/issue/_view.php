@@ -6,11 +6,20 @@
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->id), array('/issue/view', 'id'=>$data->id)); ?>
 	<br />
 
 	<div>
-	<?php echo CHtml::encode($this->getProject()->name); ?>
+	<?php if($this instanceOf Issue) 
+	{
+		echo CHtml::encode($this->getProject()->name);
+	}
+	      else 
+	      {
+	      	if($this instanceOf Project)
+	      	echo CHtml::encode($this->name);
+	      }
+	?>
 	</div>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
@@ -34,7 +43,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('owner_id')); ?>:</b>
-	<?php echo CHtml::encode($data->owner_id); ?>
+	<?php echo CHtml::encode($data->owner->username); ?>
 	<br />
 
 	<?php /*
