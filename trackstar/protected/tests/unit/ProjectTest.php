@@ -16,10 +16,6 @@ class ProjectTest extends CDbTestCase
 			array (
 				'name' => $newProjectName,
 				'description' => 'Test project number one',
-				'create_time' => '2010-01-01 00:00:00',
-				'create_user_id' => 1,
-				'update_time' => '2010-01-01 00:00:00',
-				'update_user_id' => 1,
 				)
 			);
 
@@ -73,9 +69,11 @@ class ProjectTest extends CDbTestCase
 				'description'=>'created test project 1',
 				)
 			);
-		$this -> assertTrue($project->save(false));
+		Yii::app()->user->setId($this->users('user1')->id);
+		$this -> assertTrue($project->save());
 		$retrievedProject = Project::model()->findByPk($project->id);
 		$this->assertEquals($retrievedProject->name, 'created test project 1');
+		$this->assertEquals(Yii::app()->user->id,$retrievedProject->create_user_id);
 	}
 	public function testGetUserOptions()
 	{

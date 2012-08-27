@@ -4273,3 +4273,21 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=issue/create
 HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
 ---
+2012/08/27 06:38:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/trackstar/protected/controllers/IssueController.php:198
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/trackstar/protected/controllers/IssueController.php(213): IssueController->loadProject(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/create')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+---
