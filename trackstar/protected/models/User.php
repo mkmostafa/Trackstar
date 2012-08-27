@@ -26,6 +26,7 @@ class User extends TrackStarActiveRecord
 	 * @param string $className active record class name.
 	 * @return User the static model class
 	 */
+	 public $password_repeat;
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -47,12 +48,14 @@ class User extends TrackStarActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email', 'required'),
+			array('email, username, password', 'required'),
 			array('email, username, password', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, email, username, password', 'safe', 'on'=>'search'),
 			array('email,username','unique'),
+			array('password','compare'),
+			array('password_repeat','safe'),
 		);
 	}
 
@@ -112,5 +115,16 @@ class User extends TrackStarActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function afterValidate()
+	{
+		parent::afterValidate();
+		$this->password=$this->encrypt($this->password);
+	}
+
+	public function encrypt($value)
+	{
+		return md5($value);
 	}
 }
