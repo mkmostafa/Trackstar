@@ -82,4 +82,11 @@ class ProjectTest extends CDbTestCase
 		$this->assertTrue(is_array($options));
 		$this->assertTrue(0 < count($options));
 	}
+
+	public function testUserRoleAssignment()
+	{
+		$project = $this->projects('project1');
+		$user = $this->users('user1');
+		$this->assertEquals(1,$project->associateUserToRole('owner',$user->id));
+	}
 }

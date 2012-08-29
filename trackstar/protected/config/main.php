@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'TrackStar',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -61,6 +61,11 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+
+		'authManager'=>array(
+			'class'=>'CDbAuthManager',
+			'connectionID'=>'db',
+			),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

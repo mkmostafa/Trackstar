@@ -108,4 +108,18 @@ class Project extends TrackStarActiveRecord
 
 		return $usersArray;
 	}
+
+	public function associateUserToRole($role,$userId)
+	{
+		$sql = "INSERT INTO tbl_project_user_role(project_id,user_id,role) 
+		        VALUES (:projectId,:userId,:role)";
+
+		$command = Yii::app()->db->createCommand($sql);
+		$command->bindValue(":projectId", $this->id, PDO::PARAM_INT);
+		$command->bindValue(":userId", $userId, PDO::PARAM_INT);
+		$command->bindValue(":role", $role, PDO::PARAM_STR);
+
+
+		return $command->execute();
+	}
 }
