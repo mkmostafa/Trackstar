@@ -57,7 +57,6 @@ class LineItemsController < ApplicationController
   def create
     @cart = current_cart
     @line_item = @cart.add_product(params[:product_id])
-
     reset_visit_count
 
     respond_to do |format|
