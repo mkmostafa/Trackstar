@@ -5,6 +5,8 @@ class ProjectTest extends CDbTestCase
 		'projects'=>'Project',
 		'users' => 'User',
 		'userAssignProject' => ':tbl_project_user_assignment',
+		'userRoleProject' => ':tbl_project_user_role',
+		'authAssign' => ':AuthAssignment',
 		);
 
 	public function testCrud()
@@ -47,8 +49,8 @@ class ProjectTest extends CDbTestCase
 
 	public function testDelete()
 	{
-		$projectId = $this->projects('project2')->id;
-		$this->assertTrue($this->projects('project2')->delete());
+		$projectId = $this->projects('project3')->id;
+		$this->assertTrue($this->projects('project3')->delete());
 		$retrievedProject = Project::model()->findByPk($projectId);
 		$this->assertEquals(NULL,$retrievedProject);
 	}
@@ -88,5 +90,38 @@ class ProjectTest extends CDbTestCase
 		$project = $this->projects('project1');
 		$user = $this->users('user1');
 		$this->assertEquals(1,$project->associateUserToRole('owner',$user->id));
+		$this->assertEquals(1,$project->removeUserFromRole('owner',$user->id));
+	}
+
+	public function testIsInRole()
+	{
+		$row1 = $this->userRoleProject['row1'];
+		$project = Project::model()->findByPk($row1['project_id']);
+		Yii::app()->user->setId($row1['user_id']);
+		$this->assertTrue($project->isUserInRole('member'));
+	}
+
+	public function testUserAccessBasedOnProjectRole()
+	{
+		$row1 = $this->userRoleProject['row1'];
+		Yii::app()->user->setId($row1['user_id']);
+		$project = Project::model()->findByPk($row1['project_id']);
+		$auth = Yii::app()->authManager;
+		$bizRule = 'return isset($params["project"]) &&
+		$params["project"]->isUserInRole("member");';
+		$params = array('project'=>$project);
+		$auth->assign('member',$row1['user_id'],$bizRule);
+
+		$this->assertTrue(Yii::app()->user->checkAccess('updateIssue',$params));
+		$this->assertTrue(Yii::app()->user->checkAccess('readIssue',$params));
+		$this->assertFalse(Yii::app()->user->checkAccess('updateProject',$params));
+
+
+		$project = Project::model()->findByPk(1);
+		$params = array('project'=>$project);
+		$this->assertFalse(Yii::app()->user->checkAccess('updateIssue',$params));
+		$this->assertFalse(Yii::app()->user->checkAccess('readIssue',$params));
+		$this->assertFalse(Yii::app()->user->checkAccess('updateProject',$params));
+
 	}
 }

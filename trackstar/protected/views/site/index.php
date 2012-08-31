@@ -1,6 +1,5 @@
 <?php
 /* @var $this SiteController */
-Yii::app()->name = "TrackStar";
 $this->pageTitle=Yii::app()->name;
 ?>
 

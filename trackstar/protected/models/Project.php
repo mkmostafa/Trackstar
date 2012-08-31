@@ -122,4 +122,35 @@ class Project extends TrackStarActiveRecord
 
 		return $command->execute();
 	}
+
+	public function removeUserFromRole($role,$userId)
+	{
+		$sql = "Delete from tbl_project_user_role 
+		        where 
+		        project_id = :project_id and
+		        user_id = :user_id and
+		        role = :role";
+		$command = Yii::app()->db->createCommand($sql);
+		$command->bindValue(':project_id',$this->id,PDO::PARAM_INT);
+		$command->bindValue(':user_id',$userId,PDO::PARAM_INT);
+		$command->bindValue(':role',$role,PDO::PARAM_STR);
+
+		return $command->execute();
+	}
+
+	public function isUserInRole($role)
+	{
+		$sql = "select *
+		        from tbl_project_user_role
+		        where project_id = :project_id and
+		        user_id = :user_id and
+		        role = :role";
+		$user_id = Yii::app()->user->getId();
+		$command = Yii::app()->db->createCommand($sql);
+		$command->bindValue(":project_id",$this->id,PDO::PARAM_INT);
+		$command->bindValue(":user_id",$user_id,PDO::PARAM_INT);
+		$command->bindValue(":role",$role,PDO::PARAM_STR);
+
+		return $command->execute() == 1? true:false;
+	}
 }
