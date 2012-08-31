@@ -1,8 +1,0 @@
-if("<%= @cart.total_items %>" >= 1)
-{
-	$('#cart').show('slow');
-	$('#cart').html("<%= escape_javascript(render(@cart)) %>");
-    $('#current_item').fadeOut('slow',"<%escape_javascript(render(@current_item))%>");
-    $('#current_item').fadeIn('slow',"<%escape_javascript(render(@current_item))%>");	
-}
-
