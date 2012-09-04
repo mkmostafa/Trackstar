@@ -71,6 +71,17 @@ class RbacCommand extends CConsoleCommand
      		   $role->addChild('updateProject');
 
 
+
+                  // Administration
+                  $this->_authManager->createTask('adminManagement','access to application console');
+                  $role=$this->_authManager->createRole('admin');
+                  $role->addChild('owner');
+                  $role->addChild('reader');
+                  $role->addChild('member');
+                  $role->addChild('adminManagement');
+                  $this->_authManager->assign('admin',1);
+
+
      	    echo"Authorization successfully generated";
 
      	}
